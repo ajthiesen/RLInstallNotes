@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Make sure tar is installed (it's not in some container images).
+sudo dnf install tar -y
+
+# Install micro 
+curl https://getmic.ro | bash
+
+# Move micro from the current directory to /usr/bin for a proper system-wide installation.
+sudo mv micro /usr/bin/
